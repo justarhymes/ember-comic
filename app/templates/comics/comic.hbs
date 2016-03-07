@@ -1,0 +1,7 @@
+<h3>{{model.name}}</h3>
+<div class="comic">
+  <img src={{model.image}} alt="comic">
+</div>
+<button class="left"><i class="fa fa-angle-left"></i></button>
+<i class="fa fa-angle-right"></i>
+{{#link-to 'comics' nextPost}}Next &gt;{{/link-to}}

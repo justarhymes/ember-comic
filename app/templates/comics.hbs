@@ -1,0 +1,8 @@
+<section class="comic-area column small-9 medium-10 large-11 small-order-2">
+  {{outlet}}
+</section>
+<aside class="comic-side column small-3 medium-2 large-1 small-order-1">
+  {{#each model as |comic|}}
+    {{#link-to 'comics.comic' comic tagName="div" class="page-num"}}{{comic.id}}{{/link-to}}
+  {{/each}}
+</aside>

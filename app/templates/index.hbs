@@ -1,0 +1,13 @@
+<section class="comic-area column small-9 medium-10 large-11 small-order-2">
+  <h3>Most Recent Comic</h3>
+  <div class="comic">
+    <img src="http://40.media.tumblr.com/03d177b6243773cb6a302dad1bcd5f38/tumblr_o2b7uo6M0g1trrpq2o3_500.jpg" alt="comic">
+  </div>
+  <button class="left"><i class="fa fa-angle-left"></i></button>
+  <button class="right"><i class="fa fa-angle-right"></i></button>
+</section>
+<aside class="comic-side column small-3 medium-2 large-1 small-order-1">
+  {{#each model as |comic|}}
+    {{#link-to 'comics.comic' comic tagName="div" class="page-num"}}{{comic.id}}{{/link-to}}
+  {{/each}}
+</aside>
