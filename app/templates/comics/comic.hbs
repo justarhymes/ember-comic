@@ -1,7 +1,6 @@
-<h3>{{model.name}}</h3>
-<div class="comic">
+<section class="comic">
+  <h3>{{model.name}}</h3>
+  {{comic-nav id="side-navs" fullNav=false current=model.id counter=6}}
   <img src={{model.image}} alt="comic">
-</div>
-<button class="left"><i class="fa fa-angle-left"></i></button>
-<i class="fa fa-angle-right"></i>
-{{#link-to 'comics' nextPost}}Next &gt;{{/link-to}}
+  {{comic-nav id="navigation" class="nav-wrap" current=model.id counter=6}}
+</section>

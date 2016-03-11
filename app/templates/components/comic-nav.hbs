@@ -1,0 +1,51 @@
+{{#if fullNav}}
+  <ul class="comic-nav full">
+    <li class="nav-item first">
+      {{#unless isFirstPage}}
+        {{#link-to "comics.comic" firstLink}}<i class="fa fa-angle-double-left"></i>{{/link-to}}
+      {{else}}
+        <i class="fa fa-angle-double-left"></i>
+      {{/unless}}
+    </li>
+    <li class="nav-item prev">
+      {{#unless isFirstPage}}
+        {{#link-to "comics.comic" prevLink}}<i class="fa fa-angle-left"></i>{{/link-to}}
+      {{else}}
+        <i class="fa fa-angle-left"></i>
+      {{/unless}}
+    </li>
+    <li class="nav-item mid">
+      {{currentPage}} of {{counter}}
+    </li>
+    <li class="nav-item next">
+      {{#unless isLastPage}}
+        {{#link-to "comics.comic" nextLink}}<i class="fa fa-angle-right"></i>{{/link-to}}
+      {{else}}
+        <i class="fa fa-angle-right"></i>
+      {{/unless}}
+    </li>
+    <li class="nav-item last">
+      {{#unless isLastPage}}
+        {{#link-to "comics.comic" lastLink}}<i class="fa fa-angle-double-right"></i>{{/link-to}}
+      {{else}}
+        <i class="fa fa-angle-double-right"></i>
+      {{/unless}}
+    </li>
+  </ul>
+{{else}}
+  <div class="comic-nav half">
+    {{#unless isFirstPage}}
+      <div class="left comic-item abso">
+        {{#link-to "comics.comic" prevLink}}<span><i class="fa fa-angle-left"></i></span>{{/link-to}}
+      </div>
+    {{/unless}}
+    {{#unless isLastPage}}
+      <div class="right comic-item abso">
+        {{#link-to "comics.comic" nextLink}}<span><i class="fa fa-angle-right"></i></span>{{/link-to}}
+      </div>
+    {{/unless}}
+  </div>
+{{/if}}
+
+
+{{yield}}

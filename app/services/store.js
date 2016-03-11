@@ -49,5 +49,8 @@ export default Ember.Service.extend({
   },
   findAllComics() {
     return comics;
+  },
+  comicAmount() {
+    return this.findAllComics().get('length');
   }
 });

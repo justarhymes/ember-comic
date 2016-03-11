@@ -2,16 +2,12 @@
   <div class="top-bar-left">
     <ul class="menu">
       {{#link-to "index" tagName="li" class="menu-text"}}Comic Reader{{/link-to}}
-      <li><a href="#">One</a></li>
-      <li><a href="#">Two</a></li>
+      <li>{{#link-to "comics.comic" 6}}Newest{{/link-to}}</li>
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><a href="#">Three</a></li>
-      <li><a href="#">Four</a></li>
-      <li><a href="#">Five</a></li>
-      <li><a href="#">Six</a></li>
+      <li>{{#link-to "comics.comic" 1}}Start{{/link-to}}</li>
     </ul>
   </div>
 </nav>
@@ -20,6 +16,8 @@
   {{outlet}}
 </main>
 
-<footer>
-  Web Developer Dude, 2016
+<footer class="row expanded">
+  <div class="column">
+    Web Developer Dude, 2016
+  </div>
 </footer>
