@@ -51,6 +51,7 @@ export default Ember.Service.extend({
     return comics;
   },
   comicAmount() {
-    return this.findAllComics().get('length');
+    //(polls.length + 1).toString()
+    return (comics.length).toString();
   }
 });

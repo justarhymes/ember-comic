@@ -1,6 +1,6 @@
 <section class="comic">
-  <h3>{{model.name}}</h3>
-  {{comic-nav id="side-navs" fullNav=false current=model.id counter=6}}
-  <img src={{model.image}} alt="comic">
-  {{comic-nav id="navigation" class="nav-wrap" current=model.id counter=6}}
+  <h3>{{model.comic.name}}</h3>
+  {{comic-nav id="side-navs" fullNav=false current=model.comic.id counter=model.length}}
+  <img src={{model.comic.image}} alt="comic">
+  {{comic-nav id="navigation" class="nav-wrap" current=model.comic.id counter=model.length}}
 </section>

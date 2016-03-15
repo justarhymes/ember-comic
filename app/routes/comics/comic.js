@@ -2,12 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.get('store').findComicById(params.comic_id);
+    return Ember.RSVP.hash({
+      comic: this.get('store').findComicById(params.comic_id),
+      length: this.get('store').comicAmount()
+    });
   },
 
-  howManyComics: function() {
+  /*howManyComics() {
     return this.get('store').comicAmount();
-  },
+  },*/
 
   store: Ember.inject.service()
 });
